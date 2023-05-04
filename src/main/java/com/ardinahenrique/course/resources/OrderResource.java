@@ -13,7 +13,7 @@ import com.ardinahenrique.course.entities.Order;
 import com.ardinahenrique.course.services.OrderService;
 
 @RestController
-@RequestMapping(value = "/Orders")
+@RequestMapping(value = "/orders")
 public class OrderResource {
 
 	@Autowired
@@ -26,7 +26,7 @@ public class OrderResource {
 		return ResponseEntity.ok().body(list);
 	}
 	
-	@GetMapping( value = "/(id")
+	@GetMapping( value = "/{id}")
 	public ResponseEntity<Order> FindById(@PathVariable Long id) {
 		Order obj = service.findById(id);
 		return ResponseEntity.ok().body(obj);

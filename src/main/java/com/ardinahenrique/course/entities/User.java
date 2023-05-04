@@ -88,7 +88,6 @@ public class User implements Serializable {
 	public List<Order> getOrders() {
 		return orders;
 	}
-	
 
 	@Override
 	public int hashCode() {
@@ -106,7 +105,9 @@ public class User implements Serializable {
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
+	
 
+	
 
 	
 }
